@@ -70,7 +70,7 @@ public class Game extends JPanel implements Runnable, KeyListener{
 
 	case 'A':
 		g2d.setFont(new Font("Broadway", Font.BOLD, 199));
-		g2d.setColor(Color.black);
+		g2d.setColor(Color.blue);
 		g2d.drawString("hello", 138, 182);
 		//g2d.drawImage(Tg.getImg().getImage(), Tg.getX(),580, Tg.getW(), Tg.getH(), this);//
 		g2d.drawImage(Re.getPic().getImage(), Re.getX(),580, Re.getW(), Re.getH(), this);
