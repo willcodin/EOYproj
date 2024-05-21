@@ -1,6 +1,8 @@
+import javax.swing.ImageIcon;
+
 public class Player{
 
-private String pic;
+private ImageIcon pic;
 private int x;
 private int y;
 private int dx;
@@ -11,7 +13,7 @@ private boolean movert;
 private boolean movedn;
 
 public Player () {
-	pic="";
+	pic=new ImageIcon();
 	x=0;
 	y=0;
 	dx=0;
@@ -26,7 +28,6 @@ public Player () {
 
 public Player(String s, int x1, int y1, int w1, int h1) {
 
-	pic=s;
 	x=x1;
 	y=y1;
 	dx=0;
@@ -40,7 +41,6 @@ public Player(String s, int x1, int y1, int w1, int h1) {
 
 public Player(String s, int x1, int y1, int dx1, int dy1, int w, int h,boolean r, boolean d) {
 
-	pic=s;
 	x=x1;
 	y=y1;
 	dx=dx1;
@@ -56,7 +56,7 @@ public void setDx(int c) {
 public void setDy(int c) {
 	dy=c;
 }
-public String getPic() {
+public ImageIcon getPic() {
 	return pic;
 }
 

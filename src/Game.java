@@ -17,9 +17,8 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		new Thread(this).start();
 		this.addKeyListener(this);
 		Re=new Player("Reticle.png",500,30,2,3,100,100,true,false);
-		Tg=new Target("Target.png",500,30,2,3,100,100,true,false);
-screen = 'S';
-
+		//Tg=new Target(500,30);//
+		screen = 'S';
 		key =-1;
 	}
 	
@@ -48,28 +47,36 @@ screen = 'S';
 		if( back ==null) {
 			back=(BufferedImage)( (createImage(getWidth(), getHeight())));
 		}
+		
 
 		Graphics g2d = back.createGraphics();
 		g2d.clearRect(0,0,getSize().width, getSize().height);
-		g2d.setFont( new Font("Broadway", Font.BOLD, 50));
-		g2d.drawString("key " + key, 340, 100);
+		
+		
+		screen(g2d);
+		
+		
 		twoDgraph.drawImage(back, null, 0, 0);
-		g2d.drawImage(Tg.getImg().getImage(), Tg.getX(),580, Tg.getW(), Tg.getH(), this);
-		g2d.drawImage(Re.getImg().getImage(), Re.getX(),580, Re.getW(), Re.getH(), this);
-
-
 	}
 
 	public void screen(Graphics g2d) {
-	switch(screen) {
-	
+	switch(screen){
 	
 	case 'S':
-		
-		
-	}
-	}
+		g2d.setFont(new Font("Broadway", Font.BOLD, 199));
+		g2d.setColor(Color.black);
+		g2d.drawString("hello", 138, 182);
+		break;
 
+	case 'A':
+		g2d.setFont(new Font("Broadway", Font.BOLD, 199));
+		g2d.setColor(Color.black);
+		g2d.drawString("hello", 138, 182);
+		//g2d.drawImage(Tg.getImg().getImage(), Tg.getX(),580, Tg.getW(), Tg.getH(), this);//
+		g2d.drawImage(Re.getPic().getImage(), Re.getX(),580, Re.getW(), Re.getH(), this);
+		break;
+	}
+	}
 
 	//DO NOT DELETE
 	@Override
